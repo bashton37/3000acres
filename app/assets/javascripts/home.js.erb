@@ -22,12 +22,16 @@ $(function(){
 function bannerResize(){
   var vH = $(window).height();
   var vW = $(window).width();
-  $('#banner').height(vH-80);
+  var videoW = $('.video-outer').width();
+  $('.video-outer').height(videoW/2);
+  $('.video-inner').height(videoW/2);
+  
   if(vW>420){
+    $('#banner').height(vH-85);
     var vHmt = vH/5;
     $('.banner-content').css('margin-top',vHmt);
   }
   else{
-    $('.banner-content').css('margin-top',50);
+    $('.banner-content').css('margin-top',20);
   }  
 }
